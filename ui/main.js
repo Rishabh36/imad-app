@@ -16,6 +16,6 @@ console.log('Loaded!');
  
 img.onclick = function()
 {
-    var interval = setInternal(moveRight,100);
+    var interval = setInterval(moveRight,100);
      
  };
