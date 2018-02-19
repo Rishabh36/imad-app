@@ -26,3 +26,22 @@ button.onclick = function()
      request.open('GET', 'http://rishabhchauhan06.imad.hasura-app.io/counter', true);
      request.send(null);
 };
+
+///Submit name
+ var nameinput = document.getElementById('name');
+ var name =nameInput.value;
+ var submit = document.getElementById('submit_btn');
+ submit.onclick = function()
+ {
+     //make arequest to the server n send the name
+     //capture a list of names n render it as a list
+     var names =['name 1 ','name 2 ', 'name 3', 'name 4'];
+     var list ='';
+     for (var i=0;i<names.length;i++)
+     {
+         list == '<li>'+ names[i] + '<li>';
+         
+     }
+     var ul = document.getElementById('namelist');
+     ul.innerHTML = list;
+ };
