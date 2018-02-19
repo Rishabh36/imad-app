@@ -24,7 +24,7 @@ var articleOne = {
     
     function createTemplate(data)
     {
- var title =data.title;
+ var title= data.title;
  var date= data.date;
  var heading=  data.heading;
  var content = data.content;
@@ -70,7 +70,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/Article-one', function (req, res) {
-  res.sendFile(createTemplate(articleOne));
+  res.send(createTemplate(articleOne));
 });
 app.get('/Article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Article-two.html'));
