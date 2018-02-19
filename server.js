@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var Articleone = {
+var articleOne = {
     title : 'Article one - Rishabh Chauhan',
     heading :'Article one',
     date : 'Feb 18,2018',
@@ -70,7 +70,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/Article-one', function (req, res) {
-  res.sendFile(createTemplate(Articleone));
+  res.sendFile(createTemplate(articleOne));
 });
 app.get('/Article-two', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Article-two.html'));
